@@ -7,7 +7,7 @@ branding and accessibility standars.
 
 # Roles
 Team Lead : Robert
-Developer : Sandy
+Developer : Robert & Sandy
 Designer  :Zousitch
 
 # Communication
