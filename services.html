@@ -1,0 +1,141 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Services - The Great Outdoors</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Inline styles specific to services page */
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .service-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 25px;
+            width: 250px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            background-color: #e6f0ff;
+        }
+
+        .service-card a {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        /* Guided Hiking images gallery */
+        .hiking-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .hiking-images img {
+            width: 18%;          /* smaller width */
+            max-width: 150px;    /* limit max size */
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .hiking-images img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Hide images initially */
+        #guided-hiking-section {
+            display: none;
+            margin-top: 30px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Menu -->
+    <nav>
+        <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <hr>
+
+    <h1>Our Services</h1>
+    <p>Click on a service to see more details and photos. Double-click an image to view it in full size.</p>
+
+    <div class="services">
+
+        <div class="service-card" onclick="showGuidedHiking()">
+            <h2>Guided Hiking Trips</h2>
+            <p>Click to see photos and details!</p>
+        </div>
+
+        <div class="service-card">
+            <h2>Outdoor Gear Rental</h2>
+            <p>High-quality tents, backpacks, and essentials for your adventure.</p>
+        </div>
+
+        <div class="service-card">
+            <h2>Camping Workshops</h2>
+            <p>Learn survival skills, navigation, and nature photography.</p>
+        </div>
+
+    </div>
+
+    <!-- Guided Hiking Images Section -->
+    <div id="guided-hiking-section">
+        <h2>Guided Hiking Trips Photos</h2>
+        <div class="hiking-images">
+            <img src="images/Hero1.jpg" alt="Hiking 1">
+            <img src="images/Hero2.jpg" alt="Hiking 2">
+            <img src="images/Hero6.jpg" alt="Hiking 3">
+            <img src="images/Hero7.jpg" alt="Hiking 4">
+            <img src="images/Hero8.jpg" alt="Hiking 5">
+            <img src="images/Hero9.jpg" alt="Hiking 6">
+            <img src="images/Hero10.jpg" alt="Hiking 7">
+        </div>
+    </div>
+
+    <script>
+        // Show Guided Hiking images when card is clicked
+        function showGuidedHiking() {
+            const section = document.getElementById('guided-hiking-section');
+            if(section.style.display === "none") {
+                section.style.display = "block";
+                section.scrollIntoView({behavior: "smooth"});
+            } else {
+                section.style.display = "none";
+            }
+        }
+
+        // Double-click on hiking images to open full size in new tab
+        const hikingImages = document.querySelectorAll('.hiking-images img');
+
+        hikingImages.forEach(img => {
+            img.addEventListener('dblclick', () => {
+                window.open(img.src, '_blank');
+            });
+        });
+    </script>
