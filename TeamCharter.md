@@ -11,7 +11,7 @@ branding and accessibility standars.
 | 🧑‍💼 Team Lead    | Robert            | Oversee project progress, manage tasks, coordinate team |
 | 💻 Developer    | Robert & Sandy    | Implement website functionality, code features      |
 | 🎨 Designer     | Zousitch          | Create visual design, ensure UX/UI consistency      |
-
+| 🎨 Designer     | Simon             | Create visual design, ensure UX/UI consistency      |
 
 # 📞 Communication
 ** Meetings: Weekly meetings every Monday at 6PM via zoom
